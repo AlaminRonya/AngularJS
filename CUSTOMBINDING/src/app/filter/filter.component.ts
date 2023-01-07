@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -11,7 +11,7 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  all: number = 0;
-  free: number = 0; 
-  premium: number = 0;
+  @Input('total') all: number = 0;
+  @Input() free: number = 0; 
+  @Input() premium: number = 0;
 }
