@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DemoComponent {
 
+  sayHello(data: string){
+    alert('Hello, '+ data);
+  }
 }
