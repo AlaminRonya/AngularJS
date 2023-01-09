@@ -1,4 +1,9 @@
 <div class="container">
   <input type="text" #input>
-  <button>Submit</button>
+  <button (click)="OnSubmit(input)">Submit</button>
+  <app-demo [value]="inputTxt" *ngIf="destroy">
+    <h1>Hello Java {{inputTxt}}</h1>
+  </app-demo>
+  
+  <button (click)="destroyComponent()">Destroy</button>
 </div>
