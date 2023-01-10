@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SetBackgroundDirective } from './CustomDirective/set-background.directive';
+import { HighlightDirective } from './CustomDirective/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SetBackgroundDirective
+    SetBackgroundDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
