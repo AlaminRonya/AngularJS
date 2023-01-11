@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CUSTOM-DIRECTIVE';
+
+  active: boolean = true;
 }
