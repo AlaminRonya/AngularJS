@@ -10,7 +10,7 @@ export class BetterHighlightDirective implements OnInit {
   }
   
   @Input() defaultColor: string = 'transparent';
-  @Input('appBetterhighlight') highlightColor: string = 'pink';
+  @Input('appBetterHighlight') highlightColor: string = 'pink';
   @Input() title: string = 'This is title';
   
   @HostBinding('style.backgroundColor') background: string = this.defaultColor;
