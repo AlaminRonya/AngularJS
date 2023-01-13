@@ -9,4 +9,12 @@ export class AppComponent {
   title = 'CUSTOM-DIRECTIVE';
 
   active: boolean = true;
+
+  display: boolean = false;
+
+  occupation: string = 'doctor';
+
+  DisplayNotice(){
+    this.display = !this.display;
+  }
 }

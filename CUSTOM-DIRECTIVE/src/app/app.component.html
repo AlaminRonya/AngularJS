@@ -17,3 +17,27 @@
 <div class="container" [appStyle] ="{backgroundColor: active ? 'Green' : 'Red', color: 'white', fontWeight: 'bold'}">
   <p>This is a demo HTML content to understand Custom appStyle Directive | Directives in Angular.</p>
 </div>
+
+
+<button class="btn btn-notice" (click)="DisplayNotice()">Show notice</button>
+<div class="info-container notice" *appIf="display">
+    <h3>This is important notice!</h3>
+    <p>This is a notice issued for all website users.</p>
+</div>
+
+<p *appIf="!display">This is a demo paragraph!</p>
+
+<!-- <ng-template #myVar>
+  <p>This is an example paragraph.</p>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]="display">
+  <div class="info-container notice">
+    <h3>This is important notice!</h3>
+    <p>This is a notice issued for all website users.</p>
+  </div>
+</ng-template> -->
+
+<!-- <ng-template #myVar>
+  <p>This is an example paragraph.</p>
+</ng-template> -->
