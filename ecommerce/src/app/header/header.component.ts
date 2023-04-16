@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  id = "";
+  drop(value: any): void {
+      if (this.id == value) {
+          this.id = "";
+      }
+      else {
+          this.id = value;
+      }
+  }
 }

@@ -1,1 +1,66 @@
-<p>header works!</p>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="language">
+                    <ul>
+                        <li onclick="drop('lang')">English <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id === 'lang'">
+                                <ul>
+                                    <li>English</li>
+                                    <li>Arabic</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li (click)="drop('priceCode')">USD <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id === 'priceCode'">
+                                <ul>
+                                    <li>USD</li>
+                                    <li>EUR</li>
+                                    <li>GBP</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 text-right">
+                <div class="menu-social">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Login
+                            </a>
+                        </li>
+                        <li>/</li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
