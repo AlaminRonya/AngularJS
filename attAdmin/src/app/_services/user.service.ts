@@ -13,7 +13,7 @@ export class UserService implements OnInit {
 
   constructor(private httpClient: HttpClient){}
   ngOnInit(): void{}
-  login(loginData: any) {
+  login(loginData: any): Observable<any> {
     return this.httpClient.post(this.PATH_OF_API + "/authenticate", loginData, {
       headers: this.requestHeader,
     });

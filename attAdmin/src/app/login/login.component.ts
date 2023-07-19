@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../_services/user.service';
 import { Observable } from 'rxjs';
+import { UserAuthService } from '../_services/user-auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginComponent implements OnInit {
   
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private userAuthService: UserAuthService, private router: Router){}
   ngOnInit(): void{}
   login(loginForm: NgForm) {
     this.userService.login(loginForm.value).subscribe(
@@ -24,7 +26,15 @@ export class LoginComponent implements OnInit {
         // } else {
         //   this.router.navigate(['/user']);
         // }
-        console.log(response);
+        console.log(response.accessToken);
+        console.log(response.role);
+        console.log(response.username);
+        this.userAuthService.setRole(response.role);
+        this.userAuthService.setToken(response.accessToken);
+        this.userAuthService.setUsername(response.username);
+        if(response.role === 'ADMIN'){
+          this.router.navigate(['/admin']);
+        }
       },
       (error: any) => {
         console.log(error);

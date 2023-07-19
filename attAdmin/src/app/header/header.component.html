@@ -10,16 +10,17 @@
             <a class="nav-link active" aria-current="page" href="#" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" routerLink="/admin">Admin Dashboard</a>
+            <a class="nav-link active" aria-current="page" href="#" *ngIf="isCheckUser('ADMIN')" routerLink="/admin">Admin Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" routerLink="/user">User Dashboard</a>
+            <a *ngIf="isCheckUser('USER')" class="nav-link active" aria-current="page" href="#" routerLink="/user">User Dashboard</a>
           </li>
           
           
         </ul>
-        <button type="button" class="btn btn-success" routerLink="/login">Login</button>
-        <button type="button" class="btn btn-danger">Logout</button>
+        <button type="button" *ngIf="!isLoggedIn()" class="btn btn-secondary m-2" routerLink="/register">Sign Up</button>
+        <button type="button" *ngIf="!isLoggedIn()" class="btn btn-success m-2" routerLink="/login">Login</button>
+        <button type="button" *ngIf="isLoggedIn()" class="btn btn-danger m-2" (click) ="logout()">Logout</button>
       </div>
     </div>
   </nav>
