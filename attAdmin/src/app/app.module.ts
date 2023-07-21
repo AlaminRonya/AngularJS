@@ -16,6 +16,7 @@ import { AuthGuard } from './_auth/auth.guard';
 import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
+import { UserTableComponent } from './user-table/user-table.component';
 
 
 
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HeaderComponent,
     ForbiddenComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,

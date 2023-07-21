@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AuthGuard } from './_auth/auth.guard';
 import { RegisterComponent } from './register/register.component';
+import { UserTableComponent } from './user-table/user-table.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'forbidden', component: ForbiddenComponent},
+  {path: 'userlist', component: UserTableComponent},
 ];
 
 @NgModule({

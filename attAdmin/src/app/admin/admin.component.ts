@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  status = false;
+  addToggle()
+  {
+    this.status = !this.status;       
+  }
 
 }

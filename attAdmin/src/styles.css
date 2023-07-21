@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+body{
+    /* background: url(); */
+    /* background-image: linear-gradient(to right, #63118b, #c1adb7, #383436);
+    background-blend-mode: multiply; */
+    background: url('assets/images/bg1.jpg') rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
