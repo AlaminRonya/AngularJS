@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'admin';
 
-  //Sidebar toggle show hide function
-  status = false;
-  addToggle()
-  {
-    this.status = !this.status;       
-  }
+  url: string = "../assets/img1.jpg";
+    imageChange(event: any){
+        this.url = event.target.src;
+    }
 }
