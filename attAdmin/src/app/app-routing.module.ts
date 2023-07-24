@@ -8,10 +8,16 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AuthGuard } from './_auth/auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { UserTableComponent } from './user-table/user-table.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { DoctorRegisterComponent } from './doctor-register/doctor-register.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'doctor', component: DoctorComponent},
+  {path: 'doctor-register', component: DoctorRegisterComponent},
+  {path: 'doctor-list', component: DoctorListComponent},
   {path: 'admin', component: AdminComponent, canActivate:[AuthGuard], data: {role:'ADMIN'}},
   {path: 'user', component: UserComponent, canActivate:[AuthGuard], data: {role:'USER'}},
   {path: 'login', component: LoginComponent},

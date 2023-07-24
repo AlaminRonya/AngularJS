@@ -17,6 +17,9 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { UserTableComponent } from './user-table/user-table.component';
+import { DoctorRegisterComponent } from './doctor-register/doctor-register.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 
 
@@ -30,7 +33,10 @@ import { UserTableComponent } from './user-table/user-table.component';
     HeaderComponent,
     ForbiddenComponent,
     RegisterComponent,
-    UserTableComponent
+    UserTableComponent,
+    DoctorRegisterComponent,
+    DoctorComponent,
+    DoctorListComponent
   ],
   imports: [
     BrowserModule,
