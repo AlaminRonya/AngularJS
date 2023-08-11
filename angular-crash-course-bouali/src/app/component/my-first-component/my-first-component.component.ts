@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MyFirstServiceService } from 'src/app/service/my-first-service.service';
+import { MyFirstService } from 'src/app/service/my-first.service';
 
 @Component({
   selector: 'app-my-first-component',
@@ -15,7 +15,7 @@ export class MyFirstComponentComponent {
   messages: Array<any> = [];
 
   constructor(
-    private service: MyFirstServiceService
+    private service: MyFirstService
   ) {
     this.messages = this.service.getAllMessages();
     this.isSubmitted = this.messages.length > 0;
