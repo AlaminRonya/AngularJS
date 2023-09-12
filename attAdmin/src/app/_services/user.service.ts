@@ -18,4 +18,12 @@ export class UserService implements OnInit {
       headers: this.requestHeader,
     });
   }
+
+  admin(authToken: string): Observable<any> {
+    return this.httpClient.get('/api/v1/admin', {
+      headers: {
+        Authorization: 'Bearer ' + authToken,
+      },
+    });
+  }
 }
